@@ -1,2 +1,2 @@
 <?php
-header("Location_ ../vista/index.php");
+header("Location: vista/index.php");
