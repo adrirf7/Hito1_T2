@@ -1,0 +1,113 @@
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  /* Transiciones suaves */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  /* Efecto al pasar el raton */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Efecto de sombra al pasar el raton */
+}
+
+.card-body {
+  background-color: #f9f9f9;
+  padding: 1.25rem;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-text {
+  color: #555;
+
+  font-size: 1rem;
+}
+
+.card-text-description {
+  margin-top: 20px;
+}
+
+/* Estilo base para los botones */
+.btn-custom {
+  border-radius: 0.25rem;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Botón para el Plan Básico */
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.btn-success:focus,
+.btn-success.focus {
+  box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.5);
+}
+
+/* Botón para el Plan Estándar */
+.btn-warning {
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+  border-color: #d39e00;
+}
+
+.btn-warning:focus,
+.btn-warning.focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5);
+}
+
+/* Botón para el Plan Premium */
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+.btn-danger:focus,
+.btn-danger.focus {
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.5);
+}
+
+.col-md-4 {
+  margin-bottom: 30px;
+}
+
+/* Ajuste para no cubrir contenido debajo del navbar fijo */
+body {
+  padding-top: 50px;
+  /* Agregar espacio para que no se cubra con el navbar */
+}
+
+/* Contenedor principal de la página */
+.container {
+  margin-bottom: 100px;
+}

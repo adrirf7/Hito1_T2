@@ -1,0 +1,83 @@
+body {
+  padding-top: 50px;
+}
+
+.container {
+  margin-bottom: 100px;
+}
+
+.card {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  /* Efecto al pasar el ratón */
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.carrito-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.carrito-item button {
+  border: none;
+  background-color: transparent;
+  color: red;
+  cursor: pointer;
+}
+
+#carrito {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Estilo del botón para eliminar */
+.carrito-item button {
+  font-size: 1.2em;
+}
+
+.card-body {
+  padding: 15px;
+  /* Da un poco de espacio alrededor del contenido */
+  text-align: center;
+  /* Centra el texto en la card */
+}
+
+.card-title {
+  font-size: 1.25em;
+  margin-bottom: 10px;
+  /* Espacio debajo del título */
+}
+
+.card-text {
+  font-size: 1em;
+  color: #777;
+  /* Color más suave para la descripción */
+}
+
+/* Media query para asegurar que las cards se vean bien en pantallas pequeñas */
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 15px;
+  }
+
+  .card img {
+    height: 150px;
+    /* Ajusta la altura de las imágenes en pantallas pequeñas */
+  }
+
+  .carrito-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
