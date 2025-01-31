@@ -136,6 +136,7 @@ class usuario
 
         $stmt->close();
     }
+
     // Método para comprobar si el paquete ya existe para el usuario
     public function paqueteExistente($usuario_id, $paquete_id)
     {

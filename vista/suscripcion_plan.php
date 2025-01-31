@@ -9,13 +9,12 @@ $usuario = $_SESSION['usuario'];
 $edad_usuario = $usuario['edad'];
 $plan_usuario = $usuario['plan_base'];
 
-require_once '../controlador/usuarios_Controller.php';
-$controller = new usuariosController();
-
 // Recuperar el plan de la URL
 $plan_base = isset($_GET['plan']) ? $_GET['plan'] : null;
 $duracion_suscripcion = isset($_POST['duracion_suscripcion']) ? $_POST['duracion_suscripcion'] : null;
 
+require_once '../controlador/usuarios_Controller.php';
+$controller = new usuariosController();
 // Lista de planes y precios
 $planes = [
     'Plan Básico' => 9.99,
@@ -200,7 +199,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     price: price
                                 });
                                 addToCarrito(pack, price, id);
-                                this.classList.add('disabled'); // Deshabilitar visualmente el paquete
                             }
                         }
                     });
@@ -277,15 +275,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 var duracion = document.getElementById('duracion_suscripcion').value;
                 actualizarTotal(duracion);
             }
-
-            // Para permitir que los paquetes se vuelvan a agregar después de ser eliminados:
-            function habilitarPaquete(id) {
-                var packElement = document.querySelector(`[data-id='${id}']`);
-                if (packElement) {
-                    packElement.classList.remove('disabled'); // Rehabilitar el paquete visualmente
-                }
-            }
-
             // Cuando la duración cambie
             document.getElementById('duracion_suscripcion').addEventListener('change', function() {
                 var duracion = this.value;

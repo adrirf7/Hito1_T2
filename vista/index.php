@@ -4,8 +4,6 @@ $usuario = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : null;
 require_once '../controlador/planes_controller.php';
 $controller = new planesController();
 $planes = $controller->listarPlanes();
-
-
 ?>
 
 <!DOCTYPE html>
